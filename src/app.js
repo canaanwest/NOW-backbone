@@ -7,7 +7,7 @@ import _ from 'underscore';
 import './css/foundation.css';
 import './css/style.css';
 import Song from './models/song';
-import SongList from './models/song_list';
+import SongList from './collections/song_list';
 
 //hard coded data
 let songTemplate;
@@ -49,6 +49,7 @@ $(document).ready( () => {
   songData.forEach((song) => {
     $('#song-list').append(songTemplate(song))
   })
+  $('#song-list').append(songTemplate(alaska.attributes));
 });
 
 
