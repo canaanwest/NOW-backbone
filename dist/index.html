@@ -5,19 +5,37 @@
   <head>
     <meta charset="utf-8">
     <title>NOW That's What I Call Backbone</title>
+    <script src="app.bundle.js" type="text/javascript"></script>
   </head>
   <body>
     <header>
       <h1>Totally Awesome Mix CD</h1>
     </header>
     <main>
-      <ul id="song-list"> </ul>
+
+      <table>
+          <thead>
+            <th class="sort title">Title</th>
+            <th class="sort artist">Artist</th>
+            <th class="sort year">Year</th>
+          </thead>
+          <tbody id="song-list">
+          </tbody>
+        </table>
     </main>
 
     <script id="song-template" type="text/template">
-      <!-- Add Template for Song fields here -->
+      <tr class="song">
+        <td>
+          <%- title %>
+        </td>
+        <td>
+          <%- artist %>
+        </td>
+        <td>
+          <%- year %>
+        </td>
+      </tr>
     </script>
-
-  <script src="app.bundle.js" type="text/javascript"></script>
 </body>
 </html>
