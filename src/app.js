@@ -40,6 +40,7 @@ console.log(alaska)
 // create a new list of songs using song data;
 const songList = new SongList(songData);
 songList.add(alaska);
+console.log(songList);
 
 
 // document ready
