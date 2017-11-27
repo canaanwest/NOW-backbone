@@ -43,13 +43,25 @@ songList.add(alaska);
 console.log(songList);
 
 
+//create render method
+const render = function(songList) {
+  const songTemplate = _.template($('#song-template').html());
+  const $songList = $('#song-list')
+  $songList.empty()
+  songList.forEach((song) => {
+    $songList.append(songTemplate(song.attributes))
+  })
+}
+
 // document ready
 $(document).ready( () => {
-  songTemplate = _.template($('#song-template').html());
-  songData.forEach((song) => {
-    $('#song-list').append(songTemplate(song))
-  })
-  $('#song-list').append(songTemplate(alaska.attributes));
+  // songTemplate = _.template($('#song-template').html());
+  // songData.forEach((song) => {
+  //   $('#song-list').append(songTemplate(song))
+  // })
+  // $('#song-list').append(songTemplate(alaska.attributes));
+
+  render(songList);
 });
 
 
