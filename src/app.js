@@ -29,9 +29,6 @@ const songData = [
     },
   ];
 
-console.log('it loaded!');
-//
-
 // create a new instance of song using the model
 const alaska = new Song({
   title: "Alaska",
@@ -40,7 +37,9 @@ const alaska = new Song({
 })
 
 console.log(alaska)
-// render function
+// create a new list of songs using song data;
+const songList = new SongList(songData);
+songList.add(alaska);
 
 
 // document ready
