@@ -55,11 +55,11 @@ const render = function(songList) {
 
 // document ready
 $(document).ready( () => {
-  // songTemplate = _.template($('#song-template').html());
-  // songData.forEach((song) => {
-  //   $('#song-list').append(songTemplate(song))
-  // })
-  // $('#song-list').append(songTemplate(alaska.attributes));
+  songTemplate = _.template($('#song-template').html());
+  songData.forEach((song) => {
+    $('#song-list').append(songTemplate(song))
+  })
+  $('#song-list').append(songTemplate(alaska.attributes));
 
   render(songList);
 });
