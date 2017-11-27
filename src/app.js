@@ -6,7 +6,8 @@ import _ from 'underscore';
 // CSS
 import './css/foundation.css';
 import './css/style.css';
-import Song from './models/song'
+import Song from './models/song';
+import SongList from './models/song_list';
 
 //hard coded data
 let songTemplate;
